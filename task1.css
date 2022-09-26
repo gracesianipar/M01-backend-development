@@ -1,0 +1,50 @@
+html {
+    background-color: goldenrod;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    margin: auto;
+    width: 400px;
+    margin-top: 70px;
+    background-color: #eee8aa;
+}
+
+table {
+    border-style: none;
+    text-align: center;
+}
+
+th {
+    padding: 10px;
+    padding-left: 25px;
+    border: none;
+    font-size: 20px;
+}
+
+td {
+    border: none;
+}
+
+input[type=text] {
+    padding: 8px;
+    width: 200px;
+    border-style: solid;
+    border-color: #6d6e6a;
+    font-size: 16px;
+}
+
+input[type=text]:disabled {
+    background-color: white;
+}
+
+table,
+th,
+td {
+    margin: auto;
+    text-align: center;
+    border: 1px solid #eee8aa;
+}

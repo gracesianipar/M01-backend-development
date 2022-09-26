@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="task2.css">
+    <title>task2 - 2317</title>
+</head>
+
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>BMI Calculator</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Berat badan :</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="ipt_b"></td>
+                </tr>
+                <tr>
+                    <td>Tinggi badan :</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="ipt_t"></td>
+                </tr>
+                <tr>
+                    <td><button onclick="hitung()">Hitung</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td id="bmi">BMI :</td>
+                </tr>
+                <tr>
+                    <td>Kategori :</td>
+                </tr>
+                <tr>
+                    <td id="keterangan"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script>
+        var tinggi, berat, keterangan, bmi;
+
+        function hitung() {
+            tinggi = parseFloat(document.getElementById("ipt_t").value);
+            berat = parseFloat(document.getElementById("ipt_b").value);
+            bmi = berat / (tinggi * tinggi);
+
+            let keterangan = '';
+            if (bmi > 29) {
+                keterangan = "Obesitas";
+            } else if ((bmi >= 24) & (bmi <= 29)) {
+                keterangan = "Kelebihan berat badan (overweight)";
+            } else if ((bmi >= 18.5) & (bmi <= 23.99)) {
+                keterangan = "Normal";
+            } else if ((bmi >= 15) & (bmi <= 18.49)) {
+                keterangan = "Berat badan kurang (underweight)";
+            } else {
+                keterangan = "Berat badan sangat kurang";
+            }
+            document.getElementById('bmi').innerHTML = "BMI : " + bmi.toFixed(5);
+            document.getElementById('keterangan').innerHTML = keterangan;
+        }
+    </script>
+</body>
+</html
